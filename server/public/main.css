@@ -1,0 +1,32 @@
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: gainsboro;
+}
+
+button{
+    width: 10%;
+    height: 5vh;
+    background-color: rgb(185, 54, 54);
+    font-size: 1.25em;
+    border: none;
+    color: white;
+    border-radius: 2%;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: rgb(139, 43, 43);
+}
+
+button:active{
+    background-color: rgb(94, 29, 29);
+    color: rgb(94, 29, 29);
+}
+
+button:focus{
+    outline: 0;
+}

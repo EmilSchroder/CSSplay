@@ -1,0 +1,15 @@
+{
+  "name": "CSSplay",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/EmilSchroder/CSSplay.git",
+  "author": "EmilSchroder <eschro66@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
+}
