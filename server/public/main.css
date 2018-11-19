@@ -4,8 +4,39 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: gainsboro;
+    /* background-color: gainsboro; */
+    overflow: hidden;
 }
+
+.bubblewrap{    
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 15rem;
+    transform: translateX(-50%);
+	opacity: 0.75;
+	overflow: visible;
+}
+
+.bubbles{
+    width: 100%;
+    height: auto;
+}
+
+circle {
+		stroke: black;
+		fill: none;
+    }
+
+.float > g:nth-of-type(1) > g > circle{
+    animation: wiggle 5s 0.2s 1 ease-in-out;
+}
+
+.float > g:nth-of-type(1) > g {
+    animation: upwards 5s 0.2s 1 ease-in;
+}
+
 
 button{
     width: 20%;
@@ -29,10 +60,50 @@ button:active{
 
 button:focus{
     outline: 0;
-    border-radius: 50%;
+    /* animation: lapse 10s; */
+    /* border-radius: 50%;
     height: 0;
-    width: 100%;
     font-size: 0;
     color: white;
-    background-color: rgb(211, 208, 208);
+    background-color: rgb(211, 208, 208); */
+}
+
+@keyframes upwards{
+    0%{
+        stroke: red;
+    }
+
+    50%{
+        stroke: blue;
+    }
+
+    100%{
+        stroke: black;
+        transform: translateY(-500px);
+    }
+}
+
+@keyframes wiggle{
+
+    50%{
+        transform: translateX(150px);
+    }
+
+    100%{
+        transform: translateX(-150px);
+    }
+}
+
+@keyframes lapse {
+    from{
+        width: 20%;
+        height: 20vh;
+        font-size: 1.25em;
+    }
+
+    to {
+        height: 0;
+        width: 0;
+        font-size: 0;
+    }
 }
