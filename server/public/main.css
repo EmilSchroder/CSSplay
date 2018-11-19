@@ -31,7 +31,8 @@ button:focus{
     outline: 0;
     border-radius: 50%;
     height: 0;
-    width: 0%;
+    width: 100%;
     font-size: 0;
-    color: rgb(185, 54, 54);
+    color: white;
+    background-color: rgb(211, 208, 208);
 }
