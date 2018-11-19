@@ -8,8 +8,8 @@
 }
 
 button{
-    width: 10%;
-    height: 5vh;
+    width: 20%;
+    height: 20vh;
     background-color: rgb(185, 54, 54);
     font-size: 1.25em;
     border: none;
@@ -29,4 +29,9 @@ button:active{
 
 button:focus{
     outline: 0;
+    border-radius: 50%;
+    height: 0;
+    width: 0%;
+    font-size: 0;
+    color: rgb(185, 54, 54);
 }
