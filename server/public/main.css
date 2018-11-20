@@ -24,18 +24,25 @@
     height: auto;
 }
 
-circle {
-		stroke: black;
+ellipse {
 		fill: none;
+        fill: red;
     }
 
-.float > g:nth-of-type(1) > g > circle{
-    animation: wiggle 5s 0.2s 1 ease-in-out;
+.float > g:nth-of-type(1)  > g> ellipse{
+    fill: red;
+}
+.float > g:nth-of-type(2) > g > ellipse{
+    fill: blue;
+}
+.float > g:nth-of-type(3)  > g> ellipse{
+    fill: green;
+}
+.float > g:nth-of-type(4) > g > ellipse{
+    fill: black;
 }
 
-.float > g:nth-of-type(1) > g {
-    animation: upwards 5s 0.2s 1 ease-in;
-}
+
 
 
 button{
@@ -60,50 +67,24 @@ button:active{
 
 button:focus{
     outline: 0;
-    /* animation: lapse 10s; */
-    /* border-radius: 50%;
-    height: 0;
-    font-size: 0;
-    color: white;
-    background-color: rgb(211, 208, 208); */
 }
 
-@keyframes upwards{
-    0%{
-        stroke: red;
-    }
+/* svg path{
+    /* animation: moving 4s 0.2s 2 ease-in-out; 
+    transition: all 0.5s;
+} */
 
-    50%{
-        stroke: blue;
-    }
+svg path:hover{
+    /* transition: d 1s ease-in-out;
+    d: path("M 100 100 H 200");
+    d: "M 100 100 H 200"; */
+    transition: all 0.5s;
+    stroke: red;
+}
+
+@keyframes moving {
 
     100%{
-        stroke: black;
-        transform: translateY(-500px);
-    }
-}
-
-@keyframes wiggle{
-
-    50%{
-        transform: translateX(150px);
-    }
-
-    100%{
-        transform: translateX(-150px);
-    }
-}
-
-@keyframes lapse {
-    from{
-        width: 20%;
-        height: 20vh;
-        font-size: 1.25em;
-    }
-
-    to {
-        height: 0;
-        width: 0;
-        font-size: 0;
+        transform: translateY(800px);
     }
 }
